@@ -41,7 +41,7 @@ imgHover.addEventListener("mouseenter", () => {
   imgHover.style.transform ="scale(1.2)";
   imgHover.style.transition = "all 0.3s"
 });
-//mouseleave to transform back to normal
+
 imgHover.addEventListener("mouseleave", () => {
     imgHover.style.transform ="scale(1.0)";
     imgHover.style.transition = "all 0.3s"
@@ -68,8 +68,24 @@ middleImg.addEventListener("click", () => {
     middleImg.style.transform ="scale(1.2)";
 });
 
-//9.
+//9. Copy, if you copy the paragraph under the header it will turn red
+const copyP = document.querySelector(".intro p");
 
-//10.
+copyP.addEventListener("copy", event => 
+    (copyP.style.color = "red")
+);
+
+
+//10. Drag, if you drag "Welcome to the fun bus!" it will console log a message
+
+const title = document.querySelector("h2");
+
+title.addEventListener("drag", () => {
+    console.log("Welcome to FUN BUS!")
+})
+
+title.addEventListener("dragend", () => {
+    return;
+})
 
 //Stretch: GASP
